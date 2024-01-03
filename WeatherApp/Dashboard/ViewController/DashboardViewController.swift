@@ -9,7 +9,10 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
+    let viewModel = DashboardViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.getWeatherData()
     }
 }

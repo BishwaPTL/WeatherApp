@@ -15,4 +15,5 @@ class BaseService: Service {
     var requestParams: [String : AnyObject]?
     var additionalHeaders: [String : String]?
     var timeout: TimeInterval = 30
+    var responseParser: ResponseParser?
 }

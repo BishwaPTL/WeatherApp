@@ -56,12 +56,24 @@ class SessionManager: NSObject {
             return
         }
         
-        if let response = parseByContentType(service.contentType, data: responseData) {
-            serviceResponse(nil, response)
+        // Custom parser
+        if let parser = service.responseParser {
+            if let response = parser.parse(responseData) {
+                serviceResponse(nil, response)
+            } else {
+                let error = NSError(domain: SessionManager.errorDomain, code: urlResopnse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Could not parse response", "Response": responseData])
+                serviceResponse(error, nil)
+                return
+            }
         } else {
-            let error = NSError(domain: SessionManager.errorDomain, code: urlResopnse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Could not parse response", "Response": responseData])
-            serviceResponse(error, nil)
-            return
+            // Use default parser
+            if let response = parseByContentType(service.contentType, data: responseData) {
+                serviceResponse(nil, response)
+            } else {
+                let error = NSError(domain: SessionManager.errorDomain, code: urlResopnse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Could not parse response", "Response": responseData])
+                serviceResponse(error, nil)
+                return
+            }
         }
     }
     

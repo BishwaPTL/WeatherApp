@@ -26,4 +26,5 @@ protocol Service {
     var requestParams: [String: AnyObject]? { get }
     var additionalHeaders: [String: String]? { get }
     var timeout: TimeInterval { get }
+    var responseParser: ResponseParser? { get }
 }

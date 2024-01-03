@@ -41,6 +41,14 @@
 		C12020052B4351B80033B59B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12020032B4351B80033B59B /* DashboardViewController.swift */; };
 		C120200B2B445CEA0033B59B /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120200A2B445CEA0033B59B /* DashboardService.swift */; };
 		C120200C2B445CEA0033B59B /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120200A2B445CEA0033B59B /* DashboardService.swift */; };
+		C185F78E2B451A60006C9554 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F78D2B451A60006C9554 /* DashboardWorker.swift */; };
+		C185F78F2B451A60006C9554 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F78D2B451A60006C9554 /* DashboardWorker.swift */; };
+		C185F7912B457E12006C9554 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F7902B457E12006C9554 /* DashboardViewModel.swift */; };
+		C185F7922B457E12006C9554 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F7902B457E12006C9554 /* DashboardViewModel.swift */; };
+		C185F7942B458BC9006C9554 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F7932B458BC9006C9554 /* WeatherModel.swift */; };
+		C185F7952B458BC9006C9554 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F7932B458BC9006C9554 /* WeatherModel.swift */; };
+		C185F7972B45A165006C9554 /* GenericParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F7962B45A165006C9554 /* GenericParser.swift */; };
+		C185F7982B45A165006C9554 /* GenericParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F7962B45A165006C9554 /* GenericParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +94,10 @@
 		C1201FFE2B434B530033B59B /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		C12020032B4351B80033B59B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		C120200A2B445CEA0033B59B /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
+		C185F78D2B451A60006C9554 /* DashboardWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorker.swift; sourceTree = "<group>"; };
+		C185F7902B457E12006C9554 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		C185F7932B458BC9006C9554 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		C185F7962B45A165006C9554 /* GenericParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				C1201FFA2B434B180033B59B /* ResponseParserJson.swift */,
+				C185F7962B45A165006C9554 /* GenericParser.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -262,6 +275,7 @@
 		C12020062B445C3D0033B59B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C185F7902B457E12006C9554 /* DashboardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -269,6 +283,7 @@
 		C12020072B445C550033B59B /* Worker */ = {
 			isa = PBXGroup;
 			children = (
+				C185F78D2B451A60006C9554 /* DashboardWorker.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -276,6 +291,7 @@
 		C12020082B445C910033B59B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C185F7932B458BC9006C9554 /* WeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -421,11 +437,15 @@
 			files = (
 				C1201FE22B4349620033B59B /* ApiNetworkClient.swift in Sources */,
 				C12020042B4351B80033B59B /* DashboardViewController.swift in Sources */,
+				C185F78E2B451A60006C9554 /* DashboardWorker.swift in Sources */,
 				C1201FF32B434A540033B59B /* Constants.swift in Sources */,
+				C185F7942B458BC9006C9554 /* WeatherModel.swift in Sources */,
 				C1201FE92B4349C10033B59B /* Service.swift in Sources */,
 				C1201FFF2B434B530033B59B /* BaseService.swift in Sources */,
 				C1201FEC2B4349D20033B59B /* RequestSerializer.swift in Sources */,
 				C1201FE52B4349710033B59B /* NetworkClientProtocol.swift in Sources */,
+				C185F7972B45A165006C9554 /* GenericParser.swift in Sources */,
+				C185F7912B457E12006C9554 /* DashboardViewModel.swift in Sources */,
 				C1201FEF2B4349DF0033B59B /* ResponseParser.swift in Sources */,
 				C1201FA92B43471B0033B59B /* AppDelegate.swift in Sources */,
 				C1201FDF2B43493B0033B59B /* NetworkManager.swift in Sources */,
@@ -443,16 +463,20 @@
 			files = (
 				C1201FE32B4349620033B59B /* ApiNetworkClient.swift in Sources */,
 				C1201FE02B43493B0033B59B /* NetworkManager.swift in Sources */,
+				C185F78F2B451A60006C9554 /* DashboardWorker.swift in Sources */,
 				C1201FDC2B4348200033B59B /* SessionManager.swift in Sources */,
 				C1201FF02B4349DF0033B59B /* ResponseParser.swift in Sources */,
 				C1201FC02B43471D0033B59B /* WeatherAppTests.swift in Sources */,
 				C1201FE62B4349710033B59B /* NetworkClientProtocol.swift in Sources */,
+				C185F7922B457E12006C9554 /* DashboardViewModel.swift in Sources */,
+				C185F7982B45A165006C9554 /* GenericParser.swift in Sources */,
 				C1201FED2B4349D20033B59B /* RequestSerializer.swift in Sources */,
 				C12020052B4351B80033B59B /* DashboardViewController.swift in Sources */,
 				C1201FEA2B4349C10033B59B /* Service.swift in Sources */,
 				C12020002B434B530033B59B /* BaseService.swift in Sources */,
 				C120200C2B445CEA0033B59B /* DashboardService.swift in Sources */,
 				C1201FF42B434A540033B59B /* Constants.swift in Sources */,
+				C185F7952B458BC9006C9554 /* WeatherModel.swift in Sources */,
 				C1201FF92B434AFC0033B59B /* RequestSerializerJson.swift in Sources */,
 				C1201FFC2B434B180033B59B /* ResponseParserJson.swift in Sources */,
 			);
