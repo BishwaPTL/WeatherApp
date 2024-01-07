@@ -22,7 +22,19 @@ class DashboardViewModel {
         }
     }
     
-    func placeholderText() -> String? {
+    func placeholderText() -> String {
         return Texts.placeholderText
+    }
+    
+    func genericErrorText() -> String {
+        Texts.genericErrorMessage
+    }
+    
+    func numberOfSections() -> Int {
+        return 2
+    }
+    
+    func numberOfRowsInSection(section: Int) -> Int {
+        return 1
     }
 }

@@ -49,6 +49,9 @@
 		C185F7952B458BC9006C9554 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F7932B458BC9006C9554 /* WeatherModel.swift */; };
 		C185F7972B45A165006C9554 /* GenericParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F7962B45A165006C9554 /* GenericParser.swift */; };
 		C185F7982B45A165006C9554 /* GenericParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185F7962B45A165006C9554 /* GenericParser.swift */; };
+		C1E434C12B4AD88A001B9ED9 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E434C02B4AD88A001B9ED9 /* Utility.swift */; };
+		C1E434C52B4AE34E001B9ED9 /* CurrentWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E434C42B4AE34E001B9ED9 /* CurrentWeatherTableViewCell.swift */; };
+		C1E434C72B4AE4FD001B9ED9 /* HourlyHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E434C62B4AE4FD001B9ED9 /* HourlyHeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		C185F7902B457E12006C9554 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		C185F7932B458BC9006C9554 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		C185F7962B45A165006C9554 /* GenericParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericParser.swift; sourceTree = "<group>"; };
+		C1E434C02B4AD88A001B9ED9 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		C1E434C42B4AE34E001B9ED9 /* CurrentWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherTableViewCell.swift; sourceTree = "<group>"; };
+		C1E434C62B4AE4FD001B9ED9 /* HourlyHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyHeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				C1201FD82B4347820033B59B /* Delegates */,
-				C12020012B4351240033B59B /* Dashboard */,
+				C1E434C22B4AE25B001B9ED9 /* Modules */,
 				C1201FF12B434A430033B59B /* Constants */,
+				C1E434BF2B4AD874001B9ED9 /* Utility */,
 				C1201FD92B4347AC0033B59B /* SessionManager */,
 				C1201FAE2B43471B0033B59B /* Main.storyboard */,
 				C1201FB12B43471D0033B59B /* Assets.xcassets */,
@@ -259,17 +266,18 @@
 				C12020082B445C910033B59B /* Model */,
 				C12020072B445C550033B59B /* Worker */,
 				C12020062B445C3D0033B59B /* ViewModel */,
-				C12020022B43516C0033B59B /* ViewController */,
+				C12020022B43516C0033B59B /* View */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
-		C12020022B43516C0033B59B /* ViewController */ = {
+		C12020022B43516C0033B59B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C1E434C32B4AE2DF001B9ED9 /* Cells */,
 				C12020032B4351B80033B59B /* DashboardViewController.swift */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		C12020062B445C3D0033B59B /* ViewModel */ = {
@@ -302,6 +310,31 @@
 				C120200A2B445CEA0033B59B /* DashboardService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		C1E434BF2B4AD874001B9ED9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C1E434C02B4AD88A001B9ED9 /* Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C1E434C22B4AE25B001B9ED9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C12020012B4351240033B59B /* Dashboard */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C1E434C32B4AE2DF001B9ED9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C1E434C42B4AE34E001B9ED9 /* CurrentWeatherTableViewCell.swift */,
+				C1E434C62B4AE4FD001B9ED9 /* HourlyHeaderTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E434C12B4AD88A001B9ED9 /* Utility.swift in Sources */,
 				C1201FE22B4349620033B59B /* ApiNetworkClient.swift in Sources */,
 				C12020042B4351B80033B59B /* DashboardViewController.swift in Sources */,
 				C185F78E2B451A60006C9554 /* DashboardWorker.swift in Sources */,
@@ -445,7 +479,9 @@
 				C1201FEC2B4349D20033B59B /* RequestSerializer.swift in Sources */,
 				C1201FE52B4349710033B59B /* NetworkClientProtocol.swift in Sources */,
 				C185F7972B45A165006C9554 /* GenericParser.swift in Sources */,
+				C1E434C72B4AE4FD001B9ED9 /* HourlyHeaderTableViewCell.swift in Sources */,
 				C185F7912B457E12006C9554 /* DashboardViewModel.swift in Sources */,
+				C1E434C52B4AE34E001B9ED9 /* CurrentWeatherTableViewCell.swift in Sources */,
 				C1201FEF2B4349DF0033B59B /* ResponseParser.swift in Sources */,
 				C1201FA92B43471B0033B59B /* AppDelegate.swift in Sources */,
 				C1201FDF2B43493B0033B59B /* NetworkManager.swift in Sources */,
