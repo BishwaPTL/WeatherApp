@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dashboard View Controller-->
+        <!--Dashboard-->
         <scene sceneID="Ywx-jQ-4V1">
             <objects>
                 <viewController storyboardIdentifier="DashboardViewController" id="BRm-0a-SKR" customClass="DashboardViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,17 +16,92 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvG-4s-bxH">
-                                <rect key="frame" x="149" y="409" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3fU-vr-ibz">
+                                <rect key="frame" x="20" y="123" width="353" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUN-WZ-7FD" userLabel="Search View">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jux-cn-JpW">
+                                                <rect key="frame" x="0.0" y="5" width="353" height="55"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-hh-PPL" userLabel="Search ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="55"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="800-1F-QBP">
+                                                                <rect key="frame" x="20" y="0.0" width="278" height="55"/>
+                                                                <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" textContentType="location"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="BRm-0a-SKR" id="rNV-Bt-4se"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdI-RT-bsj" userLabel="Search" customClass="UIControl">
+                                                                <rect key="frame" x="308" y="0.0" width="25" height="55"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_icon" translatesAutoresizingMaskIntoConstraints="NO" id="bdx-N5-EAF">
+                                                                        <rect key="frame" x="0.0" y="15" width="25" height="25"/>
+                                                                        <color key="tintColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="25" id="net-mE-425"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="bdx-N5-EAF" firstAttribute="leading" secondItem="hdI-RT-bsj" secondAttribute="leading" id="TT1-T4-hHG"/>
+                                                                    <constraint firstItem="bdx-N5-EAF" firstAttribute="centerY" secondItem="hdI-RT-bsj" secondAttribute="centerY" id="aQN-BD-Cgm"/>
+                                                                    <constraint firstAttribute="width" constant="25" id="f31-0B-g8S"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="bdx-N5-EAF" secondAttribute="trailing" id="iLm-SE-TOb"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="didSelectSearch:" destination="BRm-0a-SKR" eventType="touchUpInside" id="9st-Jx-5m5"/>
+                                                                </connections>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.78823529410000004" green="0.86666666670000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="800-1F-QBP" firstAttribute="leading" secondItem="HgK-hh-PPL" secondAttribute="leading" constant="20" id="34u-oL-7oM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="hdI-RT-bsj" secondAttribute="bottom" id="569-ct-dtK"/>
+                                                            <constraint firstAttribute="bottom" secondItem="800-1F-QBP" secondAttribute="bottom" id="9vb-gv-HvI"/>
+                                                            <constraint firstItem="hdI-RT-bsj" firstAttribute="top" secondItem="HgK-hh-PPL" secondAttribute="top" id="l7W-Pf-4FU"/>
+                                                            <constraint firstItem="800-1F-QBP" firstAttribute="top" secondItem="HgK-hh-PPL" secondAttribute="top" id="m8h-Gk-FHe"/>
+                                                            <constraint firstItem="hdI-RT-bsj" firstAttribute="leading" secondItem="800-1F-QBP" secondAttribute="trailing" constant="10" id="sEv-00-gsi"/>
+                                                            <constraint firstAttribute="trailing" secondItem="hdI-RT-bsj" secondAttribute="trailing" constant="20" id="xEo-Xb-vdT"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Jux-cn-JpW" secondAttribute="bottom" id="Mw9-hC-Ako"/>
+                                            <constraint firstAttribute="height" constant="60" id="NzF-Xm-kK9"/>
+                                            <constraint firstItem="Jux-cn-JpW" firstAttribute="leading" secondItem="fUN-WZ-7FD" secondAttribute="leading" id="X2S-Rd-stM"/>
+                                            <constraint firstItem="Jux-cn-JpW" firstAttribute="top" secondItem="fUN-WZ-7FD" secondAttribute="top" constant="5" id="YcU-CN-JiC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jux-cn-JpW" secondAttribute="trailing" id="cLN-Qs-uhD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DY1-43-Rzj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3fU-vr-ibz" firstAttribute="leading" secondItem="DY1-43-Rzj" secondAttribute="leading" constant="20" id="Jxd-M9-KEE"/>
+                            <constraint firstItem="3fU-vr-ibz" firstAttribute="top" secondItem="DY1-43-Rzj" secondAttribute="top" constant="20" id="OAM-gd-28n"/>
+                            <constraint firstItem="DY1-43-Rzj" firstAttribute="trailing" secondItem="3fU-vr-ibz" secondAttribute="trailing" constant="20" id="VOB-3N-9Vm"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4W1-nJ-b8l"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="4W1-nJ-b8l"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="800-1F-QBP" id="HMh-pC-0oC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuL-r7-lLo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,6 +127,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="search_icon" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

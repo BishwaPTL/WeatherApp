@@ -9,7 +9,7 @@ import Foundation
 
 class DashboardWorker {
     
-    static func getWeatherData(_ cityName: String, callback: @escaping serviceResponse) {
+    static func getWeatherData(for cityName: String, callback: @escaping serviceResponse) {
         let service = DashboardService(cityName: cityName)
         NetworkManager.sharedInstance().callService(service) { (err, response) in
             guard let res = response as? WeatherData else {
