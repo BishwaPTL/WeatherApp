@@ -31,11 +31,13 @@ class DashboardViewController: UIViewController {
     }
     
     private func getWeatherData(for city: String) {
-        viewModel.getWeatherData(for: city) { success in
-            if success {
-                
-            } else {
-                Utility.showAlert(withMessage: self.viewModel.genericErrorText(), onController: self)
+        viewModel.getWeatherData(for: city) { [weak self] success in
+            if let this = self {
+                if success {
+                    this.tableView.reloadData()
+                } else {
+                    Utility.showAlert(withMessage: this.viewModel.genericErrorText(), onController: this)
+                }
             }
         }
     }
@@ -54,6 +56,7 @@ extension DashboardViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell: CurrentWeatherTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.currentWeatherTableViewCell) as! CurrentWeatherTableViewCell
+            cell.viewModel = viewModel
             return cell
         } else if indexPath.section == 1 {
             let cell: HourlyHeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.hourlyHeaderTableViewCell) as! HourlyHeaderTableViewCell

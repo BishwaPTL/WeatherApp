@@ -16,6 +16,10 @@ class NetworkManager {
         if let mockInstance = mockInstance {
             self.mockInstance = mockInstance
             return mockInstance
+        }
+        
+        if let mockInstance = NetworkManager.mockInstance {
+            return mockInstance
         } else {
             return apiInstance
         }

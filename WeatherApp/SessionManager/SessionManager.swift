@@ -27,7 +27,9 @@ class SessionManager: NSObject {
     func startService(_ service: Service, withResponseObject serviceResponse: @escaping serviceResponse) {
         let request = createRequest(service)
         let dataTask = createSession().dataTask(with: request) { (data, response, error) in
-            self.processResponseHandler(service, data: data, response: response, error: error, serviceResponse: serviceResponse)
+            DispatchQueue.main.async {
+                self.processResponseHandler(service, data: data, response: response, error: error, serviceResponse: serviceResponse)
+            }
         }
         dataTask.resume()
     }
@@ -53,7 +55,6 @@ class SessionManager: NSObject {
         if urlResopnse.statusCode > 299 {
             let error = NSError(domain: SessionManager.errorDomain, code: urlResopnse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Error - use 'Response' key for response data", "Response": responseData])
             serviceResponse(error, nil)
-            return
         }
         
         // Custom parser
@@ -63,7 +64,6 @@ class SessionManager: NSObject {
             } else {
                 let error = NSError(domain: SessionManager.errorDomain, code: urlResopnse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Could not parse response", "Response": responseData])
                 serviceResponse(error, nil)
-                return
             }
         } else {
             // Use default parser
@@ -72,7 +72,6 @@ class SessionManager: NSObject {
             } else {
                 let error = NSError(domain: SessionManager.errorDomain, code: urlResopnse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Could not parse response", "Response": responseData])
                 serviceResponse(error, nil)
-                return
             }
         }
     }
