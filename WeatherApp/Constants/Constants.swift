@@ -31,4 +31,5 @@ struct ApiPath {
 struct Texts {
     static let placeholderText = "Search for city"
     static let genericErrorMessage = "Something went wrong, please try again."
+    static let cityName = "Sydney"
 }

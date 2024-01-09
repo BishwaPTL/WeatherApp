@@ -18,6 +18,7 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        getWeatherData(for: Texts.cityName)
     }
     
     private func setupUI() {
@@ -44,7 +45,7 @@ class DashboardViewController: UIViewController {
 }
 
 //MARK: TableViewDataSource:
-extension DashboardViewController : UITableViewDataSource {
+extension DashboardViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int{
         return viewModel.numberOfSections()
     }
