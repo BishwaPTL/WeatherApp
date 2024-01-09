@@ -32,7 +32,7 @@ class DashboardViewModel {
     }
     
     func numberOfSections() -> Int {
-        return 2
+        return 3
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
@@ -47,16 +47,16 @@ class DashboardViewModel {
         return yearString
     }
     
-    var cityName: String? {
+    var cityName: String {
         let cityName = "\(weatherData?.location.name ?? ""), \(weatherData?.location.country ?? "")"
         return cityName
     }
     
-    var weatherCondition: String? {
+    var weatherCondition: String {
         return weatherData?.current.condition.text ?? ""
     }
     
-    var tempWithUnits: String? {
+    var tempWithUnits: String {
         var condition = ""
         let temperature = weatherData?.current.tempC ?? 0
         condition += Int(temperature) < 0 ? "−" : ""
@@ -66,6 +66,28 @@ class DashboardViewModel {
     
     var weatherIconUrl: URL? {
         let icon = weatherData?.current.condition.icon ?? ""
+        guard let iconUrl = URL(string: "https:\(icon)") else {return nil}
+        return iconUrl
+    }
+    
+    func getForecastTime(at index: Int) -> String {
+        var forecastTime = ""
+        let time = weatherData?.forecast.forecastday.first?.hour[index].time ?? ""
+        let timeArr = time.components(separatedBy: " ")
+        forecastTime = timeArr.last ?? ""
+        return forecastTime
+    }
+    
+    func getForecastTempWithUnits(at index: Int) -> String {
+        var condition = ""
+        let temperature = weatherData?.forecast.forecastday.first?.hour[index].tempC ?? 0
+        condition += Int(temperature) < 0 ? "−" : ""
+        condition += String(abs(Int(temperature))) + "°C"
+        return condition
+    }
+    
+    func getForecastIconUrl(at index: Int) -> URL? {
+        let icon = weatherData?.forecast.forecastday.first?.hour[index].condition.icon ?? ""
         guard let iconUrl = URL(string: "https:\(icon)") else {return nil}
         return iconUrl
     }

@@ -19,6 +19,8 @@ struct VCIdentifiers {
 struct CellIdentifiers {
     static let currentWeatherTableViewCell = "CurrentWeatherTableViewCell"
     static let hourlyHeaderTableViewCell = "HourlyHeaderTableViewCell"
+    static let forecastTableViewCell = "ForecastTableViewCell"
+    static let forecastCollectionViewCell = "ForecastCollectionViewCell"
 }
 
 struct ApiPath {
@@ -31,5 +33,5 @@ struct ApiPath {
 struct Texts {
     static let placeholderText = "Search for city"
     static let genericErrorMessage = "Something went wrong, please try again."
-    static let cityName = "Sydney"
+    static let cityName = "Pune"
 }

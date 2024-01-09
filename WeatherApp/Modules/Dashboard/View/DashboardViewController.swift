@@ -62,8 +62,23 @@ extension DashboardViewController: UITableViewDataSource {
         } else if indexPath.section == 1 {
             let cell: HourlyHeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.hourlyHeaderTableViewCell) as! HourlyHeaderTableViewCell
             return cell
+        } else if indexPath.section == 2 {
+            let cell: ForecastTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.forecastTableViewCell) as! ForecastTableViewCell
+            cell.viewModel = viewModel
+            cell.collectionView.reloadData()
+            return cell
         } else {
             return UITableViewCell()
+        }
+    }
+}
+
+extension DashboardViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 2 {
+            return 200.0
+        } else {
+            return UITableView.automaticDimension
         }
     }
 }
