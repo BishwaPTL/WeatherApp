@@ -186,12 +186,12 @@
 			isa = PBXGroup;
 			children = (
 				C1201FD82B4347820033B59B /* Delegates */,
-				C1E434C22B4AE25B001B9ED9 /* Modules */,
-				C1201FF12B434A430033B59B /* Constants */,
+				C122D1872B4FC85400CEDAC1 /* Data */,
+				C122D1882B4FC85D00CEDAC1 /* Domain */,
+				C122D1892B4FC87000CEDAC1 /* Presenter */,
 				C1B823E62B4DBFB4000ADB78 /* Extensions */,
-				C1E434BF2B4AD874001B9ED9 /* Utility */,
+				C122D18A2B4FCB1200CEDAC1 /* Helper */,
 				C1201FD92B4347AC0033B59B /* SessionManager */,
-				C1201FAE2B43471B0033B59B /* Main.storyboard */,
 				C1201FB12B43471D0033B59B /* Assets.xcassets */,
 				C1201FB32B43471D0033B59B /* LaunchScreen.storyboard */,
 				C1201FB62B43471D0033B59B /* Info.plist */,
@@ -261,14 +261,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		C1201FF12B434A430033B59B /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				C1201FF22B434A540033B59B /* Constants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		C1201FF52B434A950033B59B /* Serializer */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,24 +286,11 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		C12020012B4351240033B59B /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				C12020092B445CB30033B59B /* Service */,
-				C12020082B445C910033B59B /* Model */,
-				C12020072B445C550033B59B /* Worker */,
-				C12020062B445C3D0033B59B /* ViewModel */,
-				C12020022B43516C0033B59B /* View */,
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
 		C12020022B43516C0033B59B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				C1B823E22B4DBD2F000ADB78 /* CollectionView Cells */,
 				C1E434C32B4AE2DF001B9ED9 /* TableView Cells */,
-				C12020032B4351B80033B59B /* DashboardViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +325,60 @@
 				C120200A2B445CEA0033B59B /* DashboardService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		C122D1872B4FC85400CEDAC1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C12020082B445C910033B59B /* Model */,
+				C12020092B445CB30033B59B /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C122D1882B4FC85D00CEDAC1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C12020072B445C550033B59B /* Worker */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C122D1892B4FC87000CEDAC1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C122D18C2B4FCCDD00CEDAC1 /* ViewController */,
+				C12020022B43516C0033B59B /* View */,
+				C12020062B445C3D0033B59B /* ViewModel */,
+				C122D18B2B4FCB3F00CEDAC1 /* Storyboard */,
+				C1E434BF2B4AD874001B9ED9 /* Utility */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C122D18A2B4FCB1200CEDAC1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C1201FF22B434A540033B59B /* Constants.swift */,
+				C1E434C82B4B3183001B9ED9 /* ImageDownloadManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C122D18B2B4FCB3F00CEDAC1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C1201FAE2B43471B0033B59B /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C122D18C2B4FCCDD00CEDAC1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C12020032B4351B80033B59B /* DashboardViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		C1B823C82B4C63C5000ADB78 /* Mock flies */ = {
@@ -386,17 +419,8 @@
 			isa = PBXGroup;
 			children = (
 				C1E434C02B4AD88A001B9ED9 /* Utility.swift */,
-				C1E434C82B4B3183001B9ED9 /* ImageDownloadManager.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		C1E434C22B4AE25B001B9ED9 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				C12020012B4351240033B59B /* Dashboard */,
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		C1E434C32B4AE2DF001B9ED9 /* TableView Cells */ = {
