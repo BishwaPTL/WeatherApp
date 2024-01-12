@@ -80,12 +80,6 @@ class SessionManager: NSObject {
         request.httpMethod = service.requestType.rawValue
         request.timeoutInterval = service.timeout
         
-        if let additionalHeaders = service.additionalHeaders {
-            for (key, value) in additionalHeaders {
-                request.setValue(value, forHTTPHeaderField: key)
-            }
-        }
-        
         if service.contentType.rawValue != "" {
             request.setValue(service.contentType.rawValue, forHTTPHeaderField: Constants.contentType)
         }
