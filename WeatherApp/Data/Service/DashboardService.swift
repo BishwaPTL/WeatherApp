@@ -17,3 +17,15 @@ class DashboardService: BaseService {
         self.responseParser = GenericParser<WeatherData>()
     }
 }
+
+extension DashboardService: WeatherServiceProtocol {
+    func getWeatherData(callback: @escaping serviceResponse) {
+        NetworkManager.sharedInstance().callService(self) { (err, response) in
+            guard let res = response as? WeatherData else {
+                callback(err, nil)
+                return
+            }
+            callback(nil, res)
+        }
+    }
+}

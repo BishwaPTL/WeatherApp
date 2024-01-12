@@ -65,14 +65,6 @@ class SessionManager: NSObject {
                 let error = NSError(domain: SessionManager.errorDomain, code: urlResopnse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Could not parse response", "Response": responseData])
                 serviceResponse(error, nil)
             }
-        } else {
-            // Use default parser
-            if let response = parseByContentType(service.contentType, data: responseData) {
-                serviceResponse(nil, response)
-            } else {
-                let error = NSError(domain: SessionManager.errorDomain, code: urlResopnse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Could not parse response", "Response": responseData])
-                serviceResponse(error, nil)
-            }
         }
     }
     
@@ -97,33 +89,7 @@ class SessionManager: NSObject {
         if service.contentType.rawValue != "" {
             request.setValue(service.contentType.rawValue, forHTTPHeaderField: Constants.contentType)
         }
-        
-        guard let requestParams = service.requestParams else {
-            return request as URLRequest
-        }
-        
-        if requestParams.count > 0 {
-            switch service.contentType {
-            case .JSON:
-                if let data = RequestSerializerJson().serialize(requestParams as Any) {
-                    request.httpBody = data
-                }
-            case .XML: break
-            case .NONE: break
-            }
-        }
         return request as URLRequest
-    }
-    
-    fileprivate func parseByContentType(_ contentType: ContentType, data: Data) -> Any? {
-        switch contentType {
-        case .JSON:
-            return ResponseParserJson().parse(data)
-        case .XML:
-            return XMLParser(data: data)
-        default:
-            return data
-        }
     }
 }
 

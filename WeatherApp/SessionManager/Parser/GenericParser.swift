@@ -13,8 +13,7 @@ class GenericParser<T: Decodable>: ResponseParser {
         do {
             let responseBody = try JSONDecoder().decode(T.self, from: data)
             return responseBody
-        } catch let error {
-            print("error parsing data: \(error.localizedDescription)")
+        } catch {
             return nil
         }
     }

@@ -37,10 +37,17 @@ class DashboardViewController: UIViewController {
                 if success {
                     this.tableView.reloadData()
                 } else {
-                    Utility.showAlert(withMessage: this.viewModel.genericErrorText(), onController: this)
+                    this.showAlert(withMessage: this.viewModel.genericErrorText())
                 }
             }
         }
+    }
+    
+    private func showAlert(withMessage : String?) {
+        let alertController = UIAlertController(title: "WeatherApp", message: withMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 

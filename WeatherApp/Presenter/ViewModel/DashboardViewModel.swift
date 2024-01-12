@@ -13,7 +13,7 @@ class DashboardViewModel {
     var weatherData: WeatherData?
     
     func getWeatherData(for cityName: String, callback: @escaping (Bool) -> Void) {
-        DashboardWorker.getWeatherData(for: cityName) { (err, response) in
+        DashboardWorker.getWeatherData(service: DashboardService(cityName: cityName)) { (err, response) in
             if err != nil {
                 callback(false)
             } else if let weatherData = response as? WeatherData {

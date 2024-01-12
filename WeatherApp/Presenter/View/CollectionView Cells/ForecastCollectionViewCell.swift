@@ -19,11 +19,6 @@ class ForecastCollectionViewCell: UICollectionViewCell {
         resetView()
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        resetView()
-    }
-    
     private func resetView() {
         self.timeLabel.text = ""
         self.tempLabel.text = ""
