@@ -18,6 +18,7 @@ class DashboardService: BaseService {
     }
 }
 
+//MARK: WeatherServiceProtocol
 extension DashboardService: WeatherServiceProtocol {
     func getWeatherData(callback: @escaping serviceResponse) {
         NetworkManager.sharedInstance().callService(self) { (err, response) in
