@@ -86,6 +86,9 @@ extension DashboardViewController: UITableViewDelegate {
 //MARK: UITextFieldDelegate
 extension DashboardViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
+        if let text = textField.text, !text.isEmpty {
+            getWeatherData(for: text)
+        }
+        return self.view.endEditing(true)
     }
 }
