@@ -11,9 +11,10 @@ import UIKit
 class DashboardViewModel {
     
     var weatherData: WeatherData?
+    let repository = WeatherRepositoryIMP(remoteDataSource: WeatherWorker())
     
-    func getWeatherData(for cityName: String, callback: @escaping (Bool) -> Void) {
-        DashboardWorker.getWeatherData(service: DashboardService(cityName: cityName)) { (err, response) in
+    func getWeatherData(for cityName:String, callback: @escaping (Bool) -> Void) {
+        repository.getWeatherData(service: WeatherService(cityName: cityName)) { (err, response) in
             if err != nil {
                 callback(false)
             } else if let weatherData = response as? WeatherData {

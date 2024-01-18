@@ -7,9 +7,8 @@
 
 import Foundation
 
-class DashboardWorker {
-    
-    static func getWeatherData(service: WeatherServiceProtocol, callback: @escaping serviceResponse) {
+class WeatherWorker: WeatherDataSource {
+    func getWeatherData(service: WeatherServiceProtocol, callback: @escaping serviceResponse) {
         service.getWeatherData(callback: callback)
     }
 }
