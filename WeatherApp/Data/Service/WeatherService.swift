@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DashboardService: BaseService {
+class WeatherService: BaseService {
     
     init(cityName: String) {
         super.init()
@@ -19,7 +19,7 @@ class DashboardService: BaseService {
 }
 
 //MARK: WeatherServiceProtocol
-extension DashboardService: WeatherServiceProtocol {
+extension WeatherService: WeatherServiceProtocol {
     func getWeatherData(callback: @escaping serviceResponse) {
         NetworkManager.sharedInstance().callService(self) { (err, response) in
             guard let res = response as? WeatherData else {
