@@ -9,10 +9,10 @@ import Foundation
 
 final class WeatherRepositoryIMP {
     
-    private let remoteDataSource: WeatherDataSource
+    private let dataSource: WeatherDataSource
     
-    init(remoteDataSource: WeatherDataSource) {
-        self.remoteDataSource = remoteDataSource
+    init(dataSource: WeatherDataSource) {
+        self.dataSource = dataSource
     }
 }
 
@@ -20,6 +20,6 @@ final class WeatherRepositoryIMP {
 extension WeatherRepositoryIMP: WeatherRepository {
     
     func getWeatherData(service: WeatherServiceProtocol, callback: @escaping serviceResponse) {
-        remoteDataSource.getWeatherData(service: service, callback: callback)
+        dataSource.getWeatherData(service: service, callback: callback)
     }
 }
