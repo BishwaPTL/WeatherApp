@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "403E7E1F-F5B0-448D-AF27-FA3E8EA549FC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F71E6968-413B-486D-ADE0-3F3981DE6E7F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp/Dashboard/Worker/DashboardWorker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "getWeatherData(for:callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F71E6968-413B-486D-ADE0-3F3981DE6E7F - 543fe38d74a9890a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; () in static WeatherApp.DashboardWorker.getWeatherData(_: Swift.String, callback: (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Dashboard/Worker/DashboardWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "159">
+               </Location>
+               <Location
+                  uuid = "F71E6968-413B-486D-ADE0-3F3981DE6E7F - 543fe38d74a9890a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; () in static WeatherApp.DashboardWorker.getWeatherData(_: Swift.String, callback: (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Dashboard/Worker/DashboardWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "149">
+               </Location>
+               <Location
+                  uuid = "F71E6968-413B-486D-ADE0-3F3981DE6E7F - 543fe38d74a9884c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; () in static WeatherApp.DashboardWorker.getWeatherData(_: Swift.String, callback: (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Dashboard/Worker/DashboardWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "F71E6968-413B-486D-ADE0-3F3981DE6E7F - 145d3bfc6dd9b17e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; () in static WeatherApp.DashboardWorker.getWeatherData(for: Swift.String, callback: (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Dashboard/Worker/DashboardWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "159">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "581F5FA3-3114-459F-930C-96B2EEC1C7B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp/Dashboard/Service/CurrentWeatherService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(lat:lon:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "581F5FA3-3114-459F-930C-96B2EEC1C7B4 - 25109db75c591b2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.CurrentWeatherService.init(lat: Swift.Double, lon: Swift.Double) -&gt; WeatherApp.CurrentWeatherService"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Dashboard/Service/CurrentWeatherService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "704">
+               </Location>
+               <Location
+                  uuid = "581F5FA3-3114-459F-930C-96B2EEC1C7B4 - 25109db75c59191"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.CurrentWeatherService.init(lat: Swift.Double, lon: Swift.Double) -&gt; WeatherApp.CurrentWeatherService"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Dashboard/Service/CurrentWeatherService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "627">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBD36CEC-309E-4845-95E5-5F64AE91A66E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp/Presenter/ViewModel/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "getWeatherData(for:callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EBD36CEC-309E-4845-95E5-5F64AE91A66E - 7cfd5b318ebd6495"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.DashboardViewModel.getWeatherData(for: Swift.String, callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Presenter/ViewModel/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "101">
+               </Location>
+               <Location
+                  uuid = "EBD36CEC-309E-4845-95E5-5F64AE91A66E - f8a866908e632bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; () in WeatherApp.DashboardViewModel.getWeatherData(for: Swift.String, callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Presenter/ViewModel/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "EBD36CEC-309E-4845-95E5-5F64AE91A66E - 7cfd5b318ebd6620"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.DashboardViewModel.getWeatherData(for: Swift.String, callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Presenter/ViewModel/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "101">
+               </Location>
+               <Location
+                  uuid = "EBD36CEC-309E-4845-95E5-5F64AE91A66E - f8a866908e63008"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.NSError&gt;, Swift.Optional&lt;Any&gt;) -&gt; () in WeatherApp.DashboardViewModel.getWeatherData(for: Swift.String, callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biskalit/Workspace/WeatherApp/WeatherApp/Presenter/ViewModel/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
