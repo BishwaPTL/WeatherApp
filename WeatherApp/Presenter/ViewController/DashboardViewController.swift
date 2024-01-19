@@ -73,6 +73,7 @@ extension DashboardViewController: UITableViewDataSource {
     }
 }
 
+//MARK: UITableViewDelegate:
 extension DashboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 2 {
