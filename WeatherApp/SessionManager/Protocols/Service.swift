@@ -27,4 +27,5 @@ protocol Service {
     var additionalHeaders: [String: String]? { get }
     var timeout: TimeInterval { get }
     var responseParser: ResponseParser? { get }
+    var networkManager: NetworkClientProtocol? { get }
 }

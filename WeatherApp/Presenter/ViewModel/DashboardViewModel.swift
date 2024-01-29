@@ -11,16 +11,18 @@ import UIKit
 class DashboardViewModel {
     
     var weatherData: WeatherData?
-    let repository = WeatherRepositoryIMP(dataSource: WeatherWorker())
+    let repository: WeatherRepository
+    
+    init(repository: WeatherRepository = WeatherRepositoryIMP(dataSource: WeatherWorker())) {
+        self.repository = repository
+    }
     
     func getWeatherData(for cityName:String, callback: @escaping (Bool) -> Void) {
         repository.getWeatherData(service: WeatherService(cityName: cityName)) { (err, response) in
-            if err != nil {
-                callback(false)
-            } else if let weatherData = response as? WeatherData {
+            if let weatherData = response as? WeatherData {
                 self.weatherData = weatherData
-                callback(true)
             }
+            callback(err == nil)
         }
     }
     

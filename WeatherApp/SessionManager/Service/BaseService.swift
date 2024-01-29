@@ -16,4 +16,5 @@ class BaseService: Service {
     var additionalHeaders: [String : String]?
     var timeout: TimeInterval = 30
     var responseParser: ResponseParser?
+    var networkManager: NetworkClientProtocol?
 }
